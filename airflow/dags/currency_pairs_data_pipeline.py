@@ -21,7 +21,7 @@ HDFS_FOLDER = "currency-pairs"
 BASE_CURRENCIES_FILE = "base_currencies.csv"
 CURRENCY_RATES_FILE = "currency_rates.json"
 
-DAG_SCHEDULE_INTERVAL = "*/5 * * * *"
+DAG_SCHEDULE_INTERVAL = "*/30 * * * *"
 DAG_DEFAULT_ARGS = {
     "owner": "airflow",
     "email_on_failure": False,
