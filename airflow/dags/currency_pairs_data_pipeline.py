@@ -119,5 +119,5 @@ with DAG("currency_pairs_data_pipeline", start_date=datetime(2024, 1, 1), schedu
         verbose=False
     )
 
-    is_fast_forex_api_available >> is_base_currencies_file_available >> downloading_currency_rates >> saving_rates_to_hdfs
+    [is_fast_forex_api_available, is_base_currencies_file_available] >> downloading_currency_rates >> saving_rates_to_hdfs
     saving_rates_to_hdfs >> creating_currency_rates_table_in_hive >> inserting_currency_rates_to_hive
