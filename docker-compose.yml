@@ -268,6 +268,19 @@ services:
       interval: 10s
       retries: 10
 
+  ######################################################
+  # SUPERSET
+  ######################################################
+
+  superset:
+    image: apache/superset
+    restart: always
+    container_name: superset
+    ports:
+      - 8088:8088
+    environment:
+      - SUPERSET_SECRET_KEY=secret
+
 ######################################################
 # NETWORK
 ######################################################
