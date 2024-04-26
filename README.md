@@ -1,3 +1,6 @@
+# Currency pairs data pipeline using Apache Airflow
+
+![airflow_graph.png](airflow_graph.png)
 ### Superset init
 With your local superset container already running...
 ```console 
